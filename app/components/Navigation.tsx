@@ -4,12 +4,14 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 const navigation = [
-  { name: 'INICIO', href: '/' },
-  { name: 'SOMOS', href: '/somos' },
-  { name: 'MEDIA', href: '/media' },
-  { name: 'CONTACTO', href: '/contacto' },
+  { name: 'Inicio', href: '/' },
+  { name: 'Servicios', href: '/servicios' },
+  { name: 'Nuestra Empresa', href: '/nuestraEmpresa' },
+  { name: 'Arriendo de Equipos', href: '/arriendo' },
+  { name: 'Contacto', href: '/contacto' }
 ];
 
 export default function Navigation() {
@@ -23,10 +25,12 @@ export default function Navigation() {
           {/* Logo */}
             <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <img 
+              <Image 
               src="/resources/nexxus-brand.png" 
               alt="Nexxus Ingeniería" 
               className="h-18 w-auto"
+              width={72}
+              height={72}
               />
               <span className="text-white text-xl font-bold">
               NEXXUS INGENIERÍA

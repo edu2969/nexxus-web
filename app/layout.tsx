@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#33353A] text-white`}
       >
         <Navigation />
-        <main className="pt-16">
+        <main className="pt-24">
           {children}
         </main>
       </body>
