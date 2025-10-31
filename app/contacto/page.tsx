@@ -116,7 +116,7 @@ export default function Contacto() {
                     <div>
                       <div className="text-white font-semibold mb-1">Teléfono</div>
                       <a href="tel:56952170244" className="text-yellow-400 hover:text-yellow-300 transition-colors">
-                        +56 9 5217 0244
+                        +56 9958 22 620
                       </a>
                     </div>
                   </li>
@@ -435,7 +435,7 @@ export default function Contacto() {
               <p className="text-sm text-gray-600 mb-2">Longitudinal 6, oficina 1233<br />Independencia, Santiago</p>
               <div className="flex items-center gap-2 text-sm">
                 <PhoneIcon className="w-4 h-4 text-yellow-500" />
-                <span className="text-yellow-600 font-semibold">+56 9 5217 0244</span>
+                <span className="text-yellow-600 font-semibold">+56 9958 22 620</span>
               </div>
               </div>
             </div>
