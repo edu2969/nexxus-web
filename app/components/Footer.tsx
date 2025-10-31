@@ -8,13 +8,6 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Logo and About */}
                     <div className="lg:col-span-2">
-                        <Image
-                            src="/resources/nexxus-brand.png"
-                            alt="Nexxus Ingeniería"
-                            className="h-16 w-auto mb-4"
-                            width={64}
-                            height={64}
-                        />
                         <h3 className="text-xl font-bold mb-4">Nosotros</h3>
                         <p className="text-gray-300">
                             Somos una empresa de ingeniería especializada en montaje eléctrico industrial,
@@ -22,6 +15,13 @@ export default function Footer() {
                             Contamos con profesionales altamente capacitados y tecnología de vanguardia para
                             cumplir con los objetivos de nuestros clientes.
                         </p>
+                        <Image
+                            src="/resources/nexxus-brand-full.png"
+                            alt="Nexxus Ingeniería"
+                            className="h-32 w-auto m-4"
+                            width={128}
+                            height={64}
+                        />                        
                     </div>
 
                     {/* Site Map */}
@@ -41,7 +41,7 @@ export default function Footer() {
                         <div className="space-y-3 text-gray-300">
                             <div className="flex items-center space-x-2">
                                 <span>📍</span>
-                                <span>Avenida Los Leones 998, Santiago - Chile</span>
+                                <span>Longitudinal 6, oficina 1233, independencia, Santiago, Chile</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <span>📧</span>
@@ -49,7 +49,7 @@ export default function Footer() {
                             </div>
                             <div className="flex items-center space-x-2">
                                 <span>📱</span>
-                                <span>+56 9 1234 5678</span>
+                                <span>+56 9958 22 620 / +56 9 621 18 754</span>
                             </div>
                         </div>
                     </div>

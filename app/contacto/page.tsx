@@ -80,7 +80,7 @@ export default function Contacto() {
               Conecta con nuestros expertos en ingeniería
             </p>
             <div className="text-2xl md:text-3xl text-yellow-400 font-semibold">
-              +56 9 5217 0244
+              +56 9958 22 620 / +56 9 621 18 754
             </div>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <div className="text-white font-semibold mb-1">WhatsApp</div>
-                      <span className="text-yellow-400">+56 9 5217 0244</span>
+                      <span className="text-yellow-400">+56 9958 22 620 / +56 9 621 18 754</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-colors">
@@ -347,8 +347,8 @@ export default function Contacto() {
                   <div>
                     <h4 className="font-semibold text-lg mb-2">Dirección</h4>
                     <p className="text-gray-300">
-                      Avenida Presidente Ríos 1217<br />
-                      Villarica, Región de la Araucanía<br />
+                      Longitudinal 6, oficina 1233,<br />
+                      Independencia, Santiago<br />
                       Chile
                     </p>
                   </div>
@@ -419,24 +419,24 @@ export default function Contacto() {
             </div>
             <div className="relative">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24704.40715438897!2d-72.25042382085918!3d-39.287096318989725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614623c8e00fe6f%3A0xe7812f04b9706fcc!2sVillarrica%2C%20Araucan%C3%ADa!5e0!3m2!1ses-419!2scl!4v1683058093338!5m2!1ses-419!2scl" 
-                width="100%" 
-                height="450" 
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="filter grayscale-0 hover:saturate-110 transition-all duration-500"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.0698503267087!2d-70.66527092448889!3d-33.41877737334598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c59a3e8c3999%3A0x5cda0b1f8b4d3a8a!2sLongitudinal%206%2C%20Independencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1683058093338!5m2!1ses-419!2scl" 
+              width="100%" 
+              height="450" 
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="filter grayscale-0 hover:saturate-110 transition-all duration-500"
               />
               
               {/* Map overlay with contact info */}
               <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-xs">
-                <h4 className="font-bold text-[#33353A] mb-2">Nexxus Ingeniería</h4>
-                <p className="text-sm text-gray-600 mb-2">Av. Presidente Ríos 1217</p>
-                <div className="flex items-center gap-2 text-sm">
-                  <PhoneIcon className="w-4 h-4 text-yellow-500" />
-                  <span className="text-yellow-600 font-semibold">+56 9 5217 0244</span>
-                </div>
+              <h4 className="font-bold text-[#33353A] mb-2">Nexxus Ingeniería</h4>
+              <p className="text-sm text-gray-600 mb-2">Longitudinal 6, oficina 1233<br />Independencia, Santiago</p>
+              <div className="flex items-center gap-2 text-sm">
+                <PhoneIcon className="w-4 h-4 text-yellow-500" />
+                <span className="text-yellow-600 font-semibold">+56 9 5217 0244</span>
+              </div>
               </div>
             </div>
           </div>
@@ -448,14 +448,14 @@ export default function Contacto() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+56952170244"
+                href="tel:+56953822620"
                 className="inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg"
               >
                 <PhoneIcon className="w-5 h-5 mr-2" />
                 Llamar Ahora
               </a>
               <a
-                href="https://wa.me/56952170244"
+                href="https://wa.me/56953822620"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg"
