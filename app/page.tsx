@@ -76,7 +76,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-          <div className="text-2xl md:text-3xl text-yellow-400 mb-4">+56 9 1234 5678</div>
+          <div className="text-2xl md:text-3xl text-yellow-400 mb-4">+56 9958 22 620 / +56 9 621 18 754</div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
             ¿Necesitas hablar con Nexxus Ingeniería?
           </h2>
