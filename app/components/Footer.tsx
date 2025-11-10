@@ -49,7 +49,7 @@ export default function Footer() {
                             </div>
                             <div className="flex items-center space-x-2">
                                 <span>📱</span>
-                                <span>+56 9958 22 620 / +56 9 621 18 754</span>
+                                <span>+56 9 538 22 620 / +56 9 621 18 754</span>
                             </div>
                         </div>
                     </div>
