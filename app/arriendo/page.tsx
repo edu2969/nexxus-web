@@ -263,7 +263,7 @@ export default function ArriendoPage() {
             
             {/* Categories Sidebar */}
             <div className="lg:col-span-1">
-              <div className="bg-gradient-to-br from-[#33353A] to-gray-800 rounded-lg p-6 sticky top-24">
+              <div className="bg-linear-to-br from-[#33353A] to-gray-800 rounded-lg p-6 sticky top-24">
                 <h3 className="text-xl font-bold text-white mb-6">Categorías</h3>
                 <div className="space-y-3">
                   {categories.map((category) => (
@@ -323,7 +323,7 @@ export default function ArriendoPage() {
                     className="bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"
                   >
                     {/* Equipment Image */}
-                    <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200">
+                    <div className="relative h-48 bg-linear-to-br from-gray-100 to-gray-200">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <Image
                           src={equipment.image}
@@ -435,7 +435,7 @@ export default function ArriendoPage() {
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-2xl md:text-3xl text-yellow-400 mb-4 font-semibold">
-            +56 9 1234 5678
+            +56 9 538 22 620
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             ¿Necesita arrendar equipos especializados?
@@ -451,7 +451,7 @@ export default function ArriendoPage() {
               </svg>
             </Link>
             <Link
-              href="tel:+56912345678"
+              href="tel:+56953822620"
               className="inline-flex items-center justify-center bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-200"
             >
               LLAMAR AHORA

@@ -52,7 +52,7 @@ export default function NuestraEmpresa() {
                 
                 {/* Smaller images for visual appeal */}
                 <div className="relative h-32 rounded-lg overflow-hidden shadow-lg">
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-linear-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
                     <Image
                       src="/resources/icon_01.png"
                       alt="Proyectos Eléctricos"
@@ -64,7 +64,7 @@ export default function NuestraEmpresa() {
                 </div>
                 
                 <div className="relative h-32 rounded-lg overflow-hidden shadow-lg">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-[#33353A] flex items-center justify-center">
+                  <div className="absolute inset-0 bg-linear-to-br from-gray-700 to-[#33353A] flex items-center justify-center">
                     <Image
                       src="/resources/icon_03.png"
                       alt="Automatización"
@@ -179,7 +179,7 @@ export default function NuestraEmpresa() {
             {/* Contact Info */}
             <div>
               <div className="text-2xl md:text-3xl text-yellow-400 mb-4 font-semibold">
-                +56 9 1234 5678
+                +56 9 538 22 620
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
                 ¿Necesita hablar con Nexxus Ingeniería?
@@ -198,7 +198,7 @@ export default function NuestraEmpresa() {
             {/* Technician Image */}
             <div className="text-center">
               <div className="relative inline-block">
-                <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center shadow-2xl">
+                <div className="w-64 h-64 md:w-80 md:h-80 bg-linear-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center shadow-2xl">
                   <Image
                     src="/resources/nexxus-brand.png"
                     alt="Nexxus Ingeniería"
@@ -238,7 +238,7 @@ export default function NuestraEmpresa() {
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="text-center p-8 bg-gradient-to-br from-[#33353A] to-gray-800 rounded-lg text-white">
+            <div className="text-center p-8 bg-linear-to-br from-[#33353A] to-gray-800 rounded-lg text-white">
               <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clipRule="evenodd" />
@@ -252,7 +252,7 @@ export default function NuestraEmpresa() {
               </p>
             </div>
             
-            <div className="text-center p-8 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg text-black">
+            <div className="text-center p-8 bg-linear-to-br from-yellow-400 to-yellow-500 rounded-lg text-black">
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />

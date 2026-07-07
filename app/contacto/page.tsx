@@ -93,7 +93,7 @@ export default function Contacto() {
                   <div className="text-center">
                     <div className="text-sm text-white/70 mb-1">Teléfonos</div>
                     <div className="text-lg md:text-xl text-yellow-400 font-semibold">
-                      +56 9 538 22 620 / +56 9 621 18 754
+                      +56 9 538 22 620
                     </div>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <div className="text-white font-semibold mb-1">WhatsApp</div>
-                      <span className="text-yellow-400">+56 9 538 22 620 / +56 9 621 18 754</span>
+                      <span className="text-yellow-400">+56 9 538 22 620</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-colors">
@@ -372,7 +372,7 @@ export default function Contacto() {
           
           {/* Location Info */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-[#33353A] to-gray-800 rounded-lg p-8 text-white">
+            <div className="bg-linear-to-br from-[#33353A] to-gray-800 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-6 text-yellow-400">Información de Ubicación</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -407,7 +407,7 @@ export default function Contacto() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg p-8 text-black">
+            <div className="bg-linear-to-br from-yellow-400 to-yellow-500 rounded-lg p-8 text-black">
               <h3 className="text-2xl font-bold mb-6">¿Cómo llegar?</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
