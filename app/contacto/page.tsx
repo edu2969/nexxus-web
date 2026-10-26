@@ -161,8 +161,8 @@ export default function Contacto() {
                     </div>
                     <div>
                       <div className="text-white font-semibold mb-1">Email</div>
-                      <a href="mailto:contacto@nexxus.cl" className="text-yellow-400 hover:text-yellow-300 transition-colors">
-                        contacto@nexxus.cl
+                      <a href="mailto:contacto@nexxusingenieria.cl" className="text-yellow-400 hover:text-yellow-300 transition-colors">
+                        contacto@nexxusingenieria.cl
                       </a>
                     </div>
                   </li>
