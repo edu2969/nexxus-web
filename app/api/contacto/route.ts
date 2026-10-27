@@ -1,5 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_APIKEY);
+
+// Escapa HTML para evitar inyección de contenido en el correo
+const escapeHtml = (str: string) =>
+  String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,57 +24,56 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Configuración del transporter de nodemailer
-    // NOTA: Necesitarás configurar las variables de entorno para tu servidor SMTP
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false, // true para 465, false para otros puertos
-      auth: {
-        user: process.env.SMTP_USER, // tu email
-        pass: process.env.SMTP_PASS, // tu contraseña de aplicación
-      },
-    });
+    const safeNombre = escapeHtml(nombre);
+    const safeEmail = escapeHtml(email);
+    const safeTelefono = telefono ? escapeHtml(telefono) : '';
+    const safeMensaje = escapeHtml(mensaje).replace(/\n/g, '<br />');
 
-    // Configuración del email
-    const mailOptions = {
-      from: process.env.SMTP_USER,
-      to: 'contacto@quatrotempo.cl',
+    const { data, error } = await resend.emails.send({
+      // El dominio debe estar verificado en Resend.
+      // Para pruebas puedes usar: 'Nexxus Ingeniería <onboarding@resend.dev>'
+      from: 'Nexxus Ingeniería <contacto@nexxusingenieria.cl>',
+      to: ['contacto@nexxusingenieria.cl'],
+      replyTo: email, // Al responder, le llega directo al cliente
       subject: `Nuevo mensaje de contacto de ${nombre}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #f59e0b; border-bottom: 2px solid #f59e0b; padding-bottom: 10px;">
-            Nuevo mensaje de contacto - Quatrotempo
+            Nuevo mensaje de contacto - Nexxus Ingeniería
           </h2>
           
           <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #333; margin-top: 0;">Información del contacto:</h3>
-            <p><strong>Nombre:</strong> ${nombre}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            ${telefono ? `<p><strong>Teléfono:</strong> ${telefono}</p>` : ''}
+            <p><strong>Nombre:</strong> ${safeNombre}</p>
+            <p><strong>Email:</strong> ${safeEmail}</p>
+            ${safeTelefono ? `<p><strong>Teléfono:</strong> ${safeTelefono}</p>` : ''}
           </div>
           
           <div style="background-color: #fff; padding: 20px; border-left: 4px solid #f59e0b; margin: 20px 0;">
             <h3 style="color: #333; margin-top: 0;">Mensaje:</h3>
-            <p style="line-height: 1.6; color: #555;">${mensaje}</p>
+            <p style="line-height: 1.6; color: #555;">${safeMensaje}</p>
           </div>
           
           <div style="border-top: 1px solid #eee; padding-top: 20px; margin-top: 30px; text-align: center; color: #888; font-size: 12px;">
-            <p>Este mensaje fue enviado desde el formulario de contacto de quatrotempo.cl</p>
+            <p>Este mensaje fue enviado desde el formulario de contacto de nexxusingenieria.cl</p>
             <p>Fecha: ${new Date().toLocaleString('es-CL')}</p>
           </div>
         </div>
       `,
-    };
+    });
 
-    // Enviar el email
-    await transporter.sendMail(mailOptions);
+    if (error) {
+      console.error('Error de Resend:', error);
+      return NextResponse.json(
+        { error: 'No se pudo enviar el email' },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
-      { message: 'Email enviado correctamente' },
+      { message: 'Email enviado correctamente', id: data?.id },
       { status: 200 }
     );
-
   } catch (error) {
     console.error('Error enviando email:', error);
     return NextResponse.json(
